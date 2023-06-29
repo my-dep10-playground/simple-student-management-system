@@ -16,10 +16,12 @@ import java.util.stream.Collectors;
 public class StudentsBOImpl implements StudentsBO {
 
     private final StudentsDAO studentsDAO;
+
     private final Transformer transformer;
 
     public StudentsBOImpl(StudentsDAO studentsDAO, Transformer transformer) {
         this.studentsDAO = studentsDAO;
+
         this.transformer = transformer;
     }
 
@@ -40,6 +42,6 @@ public class StudentsBOImpl implements StudentsBO {
 
     @Override
     public void deleteStudents(int id) throws Exception {
-
+  studentsDAO.deleteById(id);
     }
 }

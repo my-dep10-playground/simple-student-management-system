@@ -36,7 +36,7 @@ public class StudentsDAOImpl implements StudentsDAO {
 
     @Override
     public void deleteById(Integer pk) throws Exception {
-                jdbcTemplate.update("DELETE FROM student WHERE id=?",pk);
+        jdbcTemplate.update("DELETE FROM student WHERE id=?",pk);
     }
 
     @Override
